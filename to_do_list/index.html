@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <div aria-live="polite" aria-atomic="true" style="position: relative;">
+        <div style="position: absolute; top: 0; right: 0; z-index: 5;">
+            <div class="toast m-5 hide bg-danger"  role="alert" id="myToast" aria-live="assertive" aria-atomic="true" data-delay="4000">
+                <div class="toast-body">
+                    <button class="ml-2 mb-1 close " type="button" data-dismiss="toast" aria-label="Close">
+                        <span class="close" aria-hidden="true">&times;</span>
+                    </button>
+                    You Can't Add Blank
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-live="polite" aria-atomic="true" style="position: relative;">
+        <div style="position: absolute; top: 0; right: 0; z-index: 5;">
+            <div class="toast m-5 hide bg-success"  role="alert" id="successToast" aria-live="assertive" aria-atomic="true" data-delay="2000">
+                <div class="toast-body">
+                    <button class="ml-2 mb-1 close " type="button" data-dismiss="toast" aria-label="Close">
+                        <span class="close" aria-hidden="true">&times;</span>
+                    </button>
+                    Added to List
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="text-center todo-bg pb-1">
+            <img id="todo" src="image/todo.png" alt="todo">
+            <form id="todoForm">
+                <div class="input-group mb-3 justify-content-center px-5">
+                    <input id="todoInput" type="text" class="form-control" placeholder="What Should I Do?" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Add</button>
+                    </div>
+                </div>
+        </form>
+        </div>
+        
+        
+        <div>
+            <ul class="list-group" id="todoList">
+             
+            </ul>
+        </div>
+    </div>
+
+
+    
+<script src="script.js"></script>    
+</body>
+
+</html>
